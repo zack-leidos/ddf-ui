@@ -203,6 +203,8 @@ public class ConfigurationApplication implements SparkApplication {
 
   private List<String> commonAttributes = Collections.emptyList();
 
+  private String commonAttributesLabel;
+
   private Map<String, String> attributeDescriptions = Collections.emptyMap();
 
   private List<String> listTemplates = Collections.emptyList();
@@ -443,6 +445,10 @@ public class ConfigurationApplication implements SparkApplication {
     this.commonAttributes = commonAttributes;
   }
 
+  public void setCommonAttributesLabel(String commonAttributesLabel) {
+    this.commonAttributesLabel = commonAttributesLabel;
+  }
+
   public void setListTemplates(List<String> listTemplates) {
     this.listTemplates = listTemplates;
   }
@@ -610,6 +616,7 @@ public class ConfigurationApplication implements SparkApplication {
     config.put("i18n", i18n);
     config.put("attributeSuggestionList", attributeSuggestionList);
     config.put("commonAttributes", commonAttributes);
+    config.put("commonAttributesLabel", commonAttributesLabel);
     config.put("defaultSources", defaultSources);
     config.put("defaultTableColumns", defaultTableColumns);
     config.put("helpUrl", helpUrl);
